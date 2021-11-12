@@ -59,7 +59,8 @@ BAG_PROFILE_TAG = 'BagIt-Profile-Identifier'
 BDBAG_PROFILE_ID = 'https://raw.githubusercontent.com/fair-research/bdbag/master/profiles/bdbag-profile.json'
 BDBAG_RO_PROFILE_ID = 'https://raw.githubusercontent.com/fair-research/bdbag/master/profiles/bdbag-ro-profile.json'
 
-CONTENT_DISP_REGEX = re.compile(r"^filename[*]=UTF-8''(?P<name>[-_.~A-Za-z0-9%]+)$")
+#CONTENT_DISP_REGEX = re.compile(r"^filename[*]=UTF-8''(?P<name>[-_.~A-Za-z0-9%]+)$")
+CONTENT_DISP_REGEX = re.compile(r"^attachment; filename[*]=UTF-8''(?P<name>[-_.~A-Za-z0-9%]+).*$")
 FILTER_REGEX = re.compile(r"(?P<column>^.*)(?P<operator>==|!=|=\*|!\*|=~|\^\*|\$\*|>=|>|<=|<)(?P<value>.*$)")
 FILTER_DOCSTRING = "\"==\" (equal), " \
                    "\"!=\" (not equal), " \
